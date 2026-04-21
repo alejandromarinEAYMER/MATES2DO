@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏆 Ranking — Mates Desdoble 2º ESO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="stars" id="stars"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="school-tag">📐 C.E. Enriqueta Aymer · 2º ESO</div>
+      <h1 class="title">
+        <span class="title-icon">🏆</span>
+        <span class="title-text">RANKING</span>
+        <span class="title-sub">MATEMÁTICAS DESDOBLE</span>
+      </h1>
+      <div class="live-badge">
+        <span class="pulse-dot"></span>
+        EN VIVO
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="podium-section">
+      <div class="podium" id="podium">
+        <!-- JS fills this -->
+      </div>
+    </section>
+
+    <section class="ranking-section">
+      <h2 class="section-title">TOP 8 CLASIFICADOS</h2>
+      <div class="ranking-list" id="rankingList">
+        <div class="loading">
+          <span class="spinner">⚙️</span> Cargando ranking...
+        </div>
+      </div>
+    </section>
+
+    <div class="admin-link-wrap">
+      <a href="admin.html" class="admin-btn">⚙️ Panel Profesor</a>
+    </div>
+  </main>
+
+  <footer>
+    <span>Actualizado automáticamente · Colegio Enriqueta Aymer</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
