@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚙️ Panel Profesor — Mates Desdoble</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+  <div class="scanlines"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="back-btn">← Ver Ranking</a>
+      <h1 class="title admin-title">
+        <span class="title-icon">⚙️</span>
+        <span class="title-text">PANEL PROFESOR</span>
+        <span class="title-sub">GESTIÓN DE PUNTOS</span>
+      </h1>
+      <div style="width:120px"></div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-toolbar">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="🔍 Buscar alumno..." class="search-input" />
+      </div>
+      <button class="btn btn-danger" id="resetBtn">🔄 Resetear todo</button>
+    </div>
+
+    <div class="admin-grid" id="adminGrid">
+      <div class="loading">
+        <span class="spinner">⚙️</span> Cargando alumnos...
+      </div>
+    </div>
+  </main>
+
+  <!-- Reset modal -->
+  <div class="modal-overlay" id="resetModal">
+    <div class="modal">
+      <h3>⚠️ Resetear puntuaciones</h3>
+      <p>Esto pondrá a 0 los puntos de todos los alumnos. Esta acción no se puede deshacer.</p>
+      <div class="modal-field">
+        <label>Contraseña de administrador:</label>
+        <input type="password" id="resetPassword" placeholder="Contraseña..." />
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="cancelReset">Cancelar</button>
+        <button class="btn btn-danger" id="confirmReset">Resetear todo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit name modal -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <h3>✏️ Editar alumno</h3>
+      <div class="modal-field">
+        <label>Nombre:</label>
+        <input type="text" id="editName" placeholder="Nombre del alumno..." />
+      </div>
+      <div class="modal-field">
+        <label>Avatar (emoji):</label>
+        <div class="emoji-grid" id="emojiGrid"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="cancelEdit">Cancelar</button>
+        <button class="btn btn-primary" id="confirmEdit">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
