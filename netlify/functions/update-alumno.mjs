@@ -30,7 +30,7 @@ export default async (req, context) => {
       });
     }
 
-    const store = getStore("alumnos");
+    const store = getStore({name:"alumnos", consistency:"strong"} );
     const alumnos = await store.get("ranking", { type: "json" }) || [];
 
     const index = alumnos.findIndex((a) => a.id === id);
